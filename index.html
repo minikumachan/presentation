@@ -1,229 +1,274 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Smart Pillow Presentation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background-color: #F8F9FA; /* 少しだけグレーがかった白 */
-            color: #1F2937; /* デフォルトの文字色を定義 */
-        }
-        /* 各セクション（スライド）のスタイル */
-        .slide {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem 1.5rem; /* スマホ用に左右のパディングを調整 */
-            text-align: center;
-        }
-        
-        /* キーワードのスタイル */
-        .keyword {
-            color: #F97316; /* オレンジ */
-        }
-        /* メインの見出しテキスト */
-        .main-text {
-            font-size: clamp(2.6rem, 6.2vw, 5.5rem); /* 改行が起こらないように最終調整 */
-            font-weight: 700;
-            line-height: 1.4;
-            letter-spacing: 0.05em;
-        }
-        /* サブテキスト */
-        .sub-text {
-            font-size: clamp(1.8rem, 4vw, 2rem); /* さらに大きく見やすく調整 */
-            color: #4A5568; /* 少し濃いグレー */
-            margin-top: 2rem;
-            max-width: 900px;
-        }
-
-        .sdg-logos {
-            display: flex;
-            gap: 1.5rem; /* ロゴ追加のため少し間隔を調整 */
-            flex-wrap: wrap; /* 画面が小さい時に折り返す */
-            margin-top: 2.5rem;
-            justify-content: center;
-            align-items: center;
-        }
-        .sdg-logos img {
-            width: clamp(100px, 15vw, 150px); /* ロゴサイズを調整 */
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Smart Pillow Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #F8F9FA;
+      color: #1F2937;
+    }
+    .slide {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .keyword { color: #F97316; }
+    .main-text {
+      font-size: clamp(2.6rem, 6.2vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+    }
+    .sub-text {
+      font-size: clamp(1.6rem, 3.8vw, 2rem);
+      color: #4A5568;
+      margin-top: 2rem;
+      max-width: 900px;
+    }
+    .sdg-logos { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 2.5rem; justify-content: center; align-items: center; }
+    .sdg-logos img { width: clamp(100px, 15vw, 150px); height: auto; }
+    .cursor-hide { cursor: none !important; }
+  </style>
 </head>
 <body class="text-gray-800">
+  <!-- Slide 1: Title -->
+  <section id="slide1" class="slide">
+    <h1 class="main-text">最高の睡眠を <span class="keyword">AI</span>と共に</h1>
+  </section>
 
-    <!-- Slide 1: Title -->
-    <section id="slide1" class="slide">
-        <h1 class="main-text">最高の睡眠を <span class="keyword">AI</span>と共に</h1>
-    </section>
+  <!-- Slide 2: Greeting/Hook -->
+  <section id="slide2" class="slide">
+    <h2 class="main-text">昨晩は<br><span class="keyword">よく眠れましたか？</span></h2>
+  </section>
 
-    <!-- Slide 2: Greeting/Hook -->
-    <section id="slide2" class="slide">
-        <h2 class="main-text">昨晩は<br><span class="keyword">よく眠れましたか？</span></h2>
-    </section>
+  <!-- Slide 3: The Problem -->
+  <section id="slide3" class="slide">
+    <h2 class="main-text">日本人の<span class="keyword">5人に1人</span>が<br>睡眠に悩んでいます</h2>
+  </section>
 
-    <!-- Slide 3: The Problem -->
-    <section id="slide3" class="slide">
-        <h2 class="main-text">
-            日本人の<span class="keyword">5人に1人</span>が<br>睡眠に悩んでいます
-        </h2>
-    </section>
-    
-    <!-- Slide 4: Economic Loss -->
-    <section id="slide4" class="slide">
-        <h2 class="main-text">
-            その経済的損失は<br>年間<span class="keyword">15兆円</span>にも
-        </h2>
-        <p class="sub-text">これは個人の問題だけでなく 見過ごせない社会全体の課題です</p>
-    </section>
+  <!-- Slide 4: Economic Loss -->
+  <section id="slide4" class="slide">
+    <h2 class="main-text">その経済的損失は<br>年間<span class="keyword">15兆円</span>にも</h2>
+    <p class="sub-text">これは個人の問題だけでなく 見過ごせない社会全体の課題です</p>
+  </section>
 
-    <!-- Slide 5: Target Audience -->
-    <section id="slide5" class="slide">
-        <h2 class="main-text">
-            朝が苦手な<span class="keyword">学生</span>から<br>不規則な生活の<span class="keyword">社会人</span>まで
-        </h2>
-        <p class="sub-text">睡眠の質を高めたい すべての人へ届けます</p>
-    </section>
+  <!-- Slide 5: Target Audience -->
+  <section id="slide5" class="slide">
+    <h2 class="main-text">朝が苦手な<span class="keyword">学生</span>から<br>不規則な生活の<span class="keyword">社会人</span>まで</h2>
+    <p class="sub-text">睡眠の質を高めたい すべての人へ届けます</p>
+  </section>
 
-    <!-- Slide 6: Product Intro -->
-    <section id="slide6" class="slide">
-         <h2 class="main-text">AI連携 <span class="keyword">スマート枕</span></h2>
-         <img src="枕のイメージ.jpg" alt="AIスマート枕のイメージ" class="max-w-2xl w-full rounded-2xl shadow-xl my-8">
-         <p class="sub-text">ただの枕ではありません あなたを<span class="keyword">最適化</span>するパートナーです</p>
-    </section>
+  <!-- Slide 6: Product Intro -->
+  <section id="slide6" class="slide">
+    <h2 class="main-text">AI連携 <span class="keyword">スマート枕</span></h2>
+    <img src="枕のイメージ.jpg" alt="AIスマート枕のイメージ" class="max-w-2xl w-full rounded-2xl shadow-xl my-8" />
+    <p class="sub-text">ただの枕ではありません あなたを<span class="keyword">最適化</span>するパートナーです</p>
+  </section>
 
-    <!-- Slide 7: AI Features -->
-    <section id="slide7" class="slide">
-        <h2 class="main-text">
-            AIがあなたの睡眠を<span class="keyword">分析</span>し<br>
-            最適な<span class="keyword">目覚め</span>と<span class="keyword">アドバイス</span>を
-        </h2>
-    </section>
+  <!-- Slide 7: AI Features -->
+  <section id="slide7" class="slide">
+    <h2 class="main-text">AIがあなたの睡眠を<span class="keyword">分析</span>し<br>最適な<span class="keyword">目覚め</span>と<span class="keyword">アドバイス</span>を</h2>
+  </section>
 
-    <!-- Slide 8: Control -->
-    <section id="slide8" class="slide">
-        <h2 class="main-text">操作は驚くほど<span class="keyword">シンプル</span></h2>
-        <img src="枕とリモコンの連携.jpg" alt="枕とリモコンの連携" class="max-w-3xl w-full rounded-2xl shadow-xl my-8">
-        <p class="sub-text">付属の<span class="keyword">リモコン</span>と 使い慣れた<span class="keyword">スマートフォン</span>から</p>
-    </section>
+  <!-- Slide 8: Control -->
+  <section id="slide8" class="slide">
+    <h2 class="main-text">操作は驚くほど<span class="keyword">シンプル</span></h2>
+    <img src="枕とリモコンの連携.jpg" alt="枕とリモコンの連携" class="max-w-3xl w-full rounded-2xl shadow-xl my-8" />
+    <p class="sub-text">付属の<span class="keyword">リモコン</span>と 使い慣れた<span class="keyword">スマートフォン</span>から</p>
+  </section>
 
-    <!-- Slide 9: SDGs -->
-    <section id="slide9" class="slide">
-        <h2 class="main-text">
-            アレルギーに配慮した<span class="keyword">天然素材</span><br>人にも地球にも優しく
-        </h2>
-        <div class="sdg-logos">
-            <img src="SDGs3.svg" alt="SDGs Goal 3: Good Health and Well-being">
-            <img src="SDGs8.svg" alt="SDGs Goal 8: Decent Work and Economic Growth">
-            <img src="SDGs12.svg" alt="SDGs Goal 12: Responsible Consumption and Production">
-        </div>
-        <p class="sub-text">SDGsの「健康と福祉」「働きがいも経済成長も」<br>「つくる責任 つかう責任」にも貢献します</p>
-    </section>
+  <!-- Slide 9: SDGs -->
+  <section id="slide9" class="slide">
+    <h2 class="main-text">アレルギーに配慮した<span class="keyword">天然素材</span><br>人にも地球にも優しく</h2>
+    <div class="sdg-logos">
+      <img src="SDGs3.svg" alt="SDGs Goal 3: Good Health and Well-being" />
+      <img src="SDGs8.svg" alt="SDGs Goal 8: Decent Work and Economic Growth" />
+      <img src="SDGs12.svg" alt="SDGs Goal 12: Responsible Consumption and Production" />
+    </div>
+    <p class="sub-text">SDGsの「健康と福祉」「働きがいも経済成長も」<br>「つくる責任 つかう責任」にも貢献します</p>
+  </section>
 
-    <!-- Slide 10: Safety -->
-    <section id="slide10" class="slide">
-        <h2 class="main-text">
-            枕と機械を<span class="keyword">分離</span><br>バッテリーも<span class="keyword">交換可能</span>
-        </h2>
-        <p class="sub-text">長く 安心して使えます</p>
-    </section>
+  <!-- Slide 10: Safety -->
+  <section id="slide10" class="slide">
+    <h2 class="main-text">枕と機械を<span class="keyword">分離</span><br>バッテリーも<span class="keyword">交換可能</span></h2>
+    <p class="sub-text">長く 安心して使えます</p>
+  </section>
 
-    <!-- Slide 11: Accessibility -->
-    <section id="slide11" class="slide">
-        <h2 class="main-text">
-            誰一人取り残さない<br><span class="keyword">ユニバーサルデザイン</span>
-        </h2>
-        <p class="sub-text">AIによる<span class="keyword">音声操作</span>機能を標準搭載し、手が不自由な方でも快適に。さらに、寝る姿勢が困難な方向けの<span class="keyword">専用モデル</span>開発も視野に入れています。</p>
-    </section>
+  <!-- Slide 11: Accessibility -->
+  <section id="slide11" class="slide">
+    <h2 class="main-text">誰一人取り残さない<br><span class="keyword">ユニバーサルデザイン</span></h2>
+    <p class="sub-text">AIによる<span class="keyword">音声操作</span>機能を標準搭載し、手が不自由な方でも快適に。さらに、寝る姿勢が困難な方向けの<span class="keyword">専用モデル</span>開発も視野に入れています。</p>
+  </section>
 
-    <!-- Slide 12: Future -->
-    <section id="slide12" class="slide">
-        <h2 class="main-text">
-            <span class="keyword">定期便</span>から<span class="keyword">コラボ</span><br>そして<span class="keyword">医療連携</span>へ
-        </h2>
-        <p class="sub-text">枕から始まるビジネスの可能性は 無限に広がります</p>
-    </section>
+  <!-- Slide 12: Future -->
+  <section id="slide12" class="slide">
+    <h2 class="main-text"><span class="keyword">定期便</span>から<span class="keyword">コラボ</span><br>そして<span class="keyword">医療連携</span>へ</h2>
+    <p class="sub-text">枕から始まるビジネスの可能性は 無限に広がります</p>
+  </section>
 
-    <!-- Slide 13: Vision -->
-    <section id="slide13" class="slide">
-         <h2 class="main-text">
-            私たちが目指す理想
-        </h2>
-        <p class="sub-text">
-            個人の<span class="keyword">生産性向上</span>と<span class="keyword">健康寿命の延伸</span>を実現し<br>
-            <span class="keyword">誰もが生き生きと活躍できる社会</span>を創造します
-        </p>
-    </section>
-    
-    <!-- Slide 14: Conclusion -->
-    <section id="slide14" class="slide">
-         <h2 class="main-text">
-            個人の<span class="keyword">生産性向上</span>から<br>
-            <span class="keyword">社会全体の健康</span>へ
-        </h2>
-    </section>
+  <!-- Slide 13: Vision -->
+  <section id="slide13" class="slide">
+    <h2 class="main-text">私たちが目指す理想</h2>
+    <p class="sub-text">個人の<span class="keyword">生産性向上</span>と<span class="keyword">健康寿命の延伸</span>を実現し<br><span class="keyword">誰もが生き生きと活躍できる社会</span>を創造します</p>
+  </section>
 
-    <!-- Slide 15: Closing -->
-    <section id="slide15" class="slide">
-        <h2 class="main-text">
-            最高の睡眠体験を<br>
-            <span class="keyword">共に創造しませんか？</span>
-        </h2>
-        <p class="sub-text">ご清聴いただき 誠にありがとうございました</p>
-    </section>
+  <!-- Slide 14: Conclusion -->
+  <section id="slide14" class="slide">
+    <h2 class="main-text">個人の<span class="keyword">生産性向上</span>から<br><span class="keyword">社会全体の健康</span>へ</h2>
+  </section>
 
+  <!-- Slide 15: Closing -->
+  <section id="slide15" class="slide">
+    <h2 class="main-text">最高の睡眠体験を<br><span class="keyword">共に創造しませんか？</span></h2>
+    <p class="sub-text">ご清聴いただき 誠にありがとうございました</p>
+  </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('.slide');
-            let currentSlideIndex = 0;
+  <!-- Control Bar -->
+  <div id="controlBar" class="fixed bottom-5 right-5 z-50 flex items-center gap-2 bg-white/80 backdrop-blur rounded-2xl shadow-lg px-3 py-2 border border-gray-200">
+    <button id="prevBtn" class="px-3 py-1.5 rounded-xl border border-gray-300 hover:bg-gray-100" title="前のスライド（← / ↑）">Prev</button>
+    <div id="progress" class="mx-1 text-sm tabular-nums">1 / 15</div>
+    <button id="nextBtn" class="px-3 py-1.5 rounded-xl border border-gray-300 hover:bg-gray-100" title="次のスライド（→ / ↓）">Next</button>
+    <div class="w-px h-5 bg-gray-300 mx-1"></div>
+    <button id="fsBtn" class="px-3 py-1.5 rounded-xl border border-gray-300 hover:bg-gray-100" title="フルスクリーン（F）">Enter FS</button>
+    <button id="helpBtn" class="px-3 py-1.5 rounded-xl border border-gray-300 hover:bg-gray-100" title="ヘルプ（?）">?</button>
+  </div>
 
-            const goToSlide = (index) => {
-                if (index >= 0 && index < slides.length) {
-                    slides[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            };
+  <!-- Help Modal -->
+  <div id="helpModal" class="fixed inset-0 z-50 hidden items-center justify-center">
+    <div class="absolute inset-0 bg-black/50" data-close="true"></div>
+    <div class="relative bg-white rounded-2xl shadow-xl max-w-lg w-[92vw] p-6">
+      <h3 class="text-xl font-bold mb-3">操作方法</h3>
+      <ul class="text-sm leading-7 text-gray-700">
+        <li>→ / ↓ : 次のスライド</li>
+        <li>← / ↑ : 前のスライド</li>
+        <li>F : フルスクリーン切替</li>
+        <li>Esc : フルスクリーン解除</li>
+        <li>ダブルクリック : 該当スライドを中央へスクロール</li>
+      </ul>
+      <div class="mt-4 flex justify-end gap-2">
+        <button class="px-4 py-2 rounded-xl border border-gray-300 hover:bg-gray-100" data-close="true">閉じる</button>
+      </div>
+    </div>
+  </div>
 
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                    e.preventDefault();
-                    goToSlide(currentSlideIndex + 1);
-                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                    e.preventDefault();
-                    goToSlide(currentSlideIndex - 1);
-                }
-            });
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const total = slides.length;
+      let current = 0;
 
-            // スクロール時の現在地インデックス更新（キーボード操作のため）
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const intersectingIndex = Array.from(slides).indexOf(entry.target);
-                        if (intersectingIndex !== -1) {
-                            currentSlideIndex = intersectingIndex;
-                        }
-                    }
-                });
-            }, {
-                threshold: 0.5 
-            });
+      const progressEl = document.getElementById('progress');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const fsBtn = document.getElementById('fsBtn');
+      const helpBtn = document.getElementById('helpBtn');
+      const helpModal = document.getElementById('helpModal');
+      const controlBar = document.getElementById('controlBar');
 
-            slides.forEach(slide => {
-                observer.observe(slide);
-            });
+      const goTo = (idx) => {
+        if (idx < 0 || idx >= total) return;
+        slides[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      };
+
+      const updateProgress = (idx) => {
+        progressEl.textContent = `${idx + 1} / ${total}`;
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            current = slides.indexOf(entry.target);
+            updateProgress(current);
+            scheduleCursorHide();
+          }
         });
-    </script>
+      }, { threshold: 0.55 });
+      slides.forEach((s) => observer.observe(s));
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); goTo(current + 1); }
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goTo(current - 1); }
+        else if (e.key.toLowerCase() === 'f') { e.preventDefault(); toggleFullscreen(); }
+        else if (e.key === '?') { e.preventDefault(); toggleHelp(true); }
+      });
+
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+      fsBtn.addEventListener('click', () => toggleFullscreen());
+      helpBtn.addEventListener('click', () => toggleHelp(true));
+
+      slides.forEach(slide => slide.addEventListener('dblclick', () => slide.scrollIntoView({ behavior: 'smooth', block: 'center' })));
+
+      helpModal.addEventListener('click', (e) => {
+        if (e.target.dataset.close === 'true') toggleHelp(false);
+      });
+
+      function toggleHelp(open) {
+        helpModal.classList.toggle('hidden', open === false);
+        if (open) helpModal.classList.add('flex'); else helpModal.classList.remove('flex');
+      }
+
+      const doc = document;
+      function isFullscreen() {
+        return doc.fullscreenElement || doc.webkitFullscreenElement || doc.msFullscreenElement;
+      }
+      async function requestFS(el) {
+        try {
+          if (el.requestFullscreen) return await el.requestFullscreen();
+          if (el.webkitRequestFullscreen) return await el.webkitRequestFullscreen();
+          if (el.msRequestFullscreen) return await el.msRequestFullscreen();
+        } catch (err) { console.warn('Fullscreen request failed:', err); }
+      }
+      async function exitFS() {
+        try {
+          if (doc.exitFullscreen) return await doc.exitFullscreen();
+          if (doc.webkitExitFullscreen) return await doc.webkitExitFullscreen();
+          if (doc.msExitFullscreen) return await doc.msExitFullscreen();
+        } catch (err) { console.warn('Fullscreen exit failed:', err); }
+      }
+      async function toggleFullscreen() {
+        if (isFullscreen()) { await exitFS(); }
+        else { await requestFS(document.documentElement); }
+      }
+      function setFsBtnLabel() { fsBtn.textContent = isFullscreen() ? 'Exit FS' : 'Enter FS'; }
+      doc.addEventListener('fullscreenchange', () => {
+        setFsBtnLabel();
+        controlBar.style.display = isFullscreen() ? 'none' : 'flex';
+      });
+      doc.addEventListener('webkitfullscreenchange', () => {
+        setFsBtnLabel();
+        controlBar.style.display = isFullscreen() ? 'none' : 'flex';
+      });
+      setFsBtnLabel();
+
+      let hideTimer = null;
+      const HIDE_AFTER = 2000;
+      const scheduleCursorHide = () => {
+        document.body.classList.remove('cursor-hide');
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+          if (isFullscreen()) document.body.classList.add('cursor-hide');
+        }, HIDE_AFTER);
+      };
+      ['mousemove', 'mousedown', 'keydown', 'wheel', 'touchstart'].forEach((ev) => {
+        window.addEventListener(ev, scheduleCursorHide, { passive: true });
+      });
+
+      setTimeout(() => toggleHelp(true), 600);
+      setTimeout(() => toggleHelp(false), 4000);
+    });
+  </script>
 </body>
 </html>
-
